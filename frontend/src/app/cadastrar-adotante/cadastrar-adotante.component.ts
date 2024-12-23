@@ -8,16 +8,19 @@ import { Component } from '@angular/core';
 export class CadastrarAdotanteComponent {
 Cadastrar(nome: string,cpf: string,genero: string, aniversario:string, contato:string,renda:string) {
   console.log(nome,cpf,genero,aniversario,contato,renda)
-
-
-  fetch("http://localhost:3000/adotantes", {
-    method: "POST",
-    headers: {
-        "Content-Type": "application/json"
-    },
-    body: JSON.stringify({nome,cpf,genero,aniversario,contato,renda})
-  })
-  .then(res => res.json())
-  .catch(err => console.log(err))
+  if (nome == "" || cpf == "" || genero == "" || aniversario == "" || contato == "") {
+    alert("Preencha todos os campos")
+  } else {
+    alert("Dados cadastrados")
+    fetch("http://localhost:3000/adotantes", {
+      method: "POST",
+      headers: {
+          "Content-Type": "application/json"
+      },
+      body: JSON.stringify({nome,cpf,genero,aniversario,contato,renda})
+    })
+    .then(res => res.json())
+    .catch(err => console.log(err))
+    }
   }
 }

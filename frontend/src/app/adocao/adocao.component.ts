@@ -77,16 +77,19 @@ export class AdocaoComponent {
   }
 
   async solicitarAdocao(idAdotante:any, cpf:string, idAnimal:any) {
+    console.log(idAdotante, cpf, idAnimal)
     let adotante:any = await this.buscarAdotantes(idAdotante);
     let animal:any = await this.buscarAnimais(idAnimal);
-    // console.log('CPF: '+ cpf);
-    // console.log('Adotante CPF: '+ this.adotante["cpf"]);
-    if (cpf == adotante["cpf"]) {
+    if (adotante == null || cpf == "" || animal == null) {
+      alert("Preencha os dados para a adoção ")
+    } else if (adotante != null && animal != null && cpf == adotante["cpf"]) {
+      // console.log('CPF: '+ cpf);
+      // console.log('Adotante CPF: '+ this.adotante["cpf"]);
       alert("cpf bate, pedido enviado ");
       let pedido = new Pedido(adotante, animal, "Em análise");
       this.pedidos.push(pedido);
       this.ps.adicionarPedidos(this.pedidos);
-    } else {
+    } else if (cpf != adotante["cpf"]) {
       alert("cpf não bate, pedido não enviado ");
     }
   }
