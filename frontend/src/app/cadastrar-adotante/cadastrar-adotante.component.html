@@ -1,0 +1,27 @@
+<div class="cadastro">
+    <form>
+        <h2>Cadastro do Adotante</h2><br>
+        <div class="form">
+            <label for="nome">Nome Completo</label><br>
+            <input id="nome" name="nome" type="text" #nome><br>
+            <label for="CPF">CPF</label><br>
+            <input id="CPF" name="CPF" type="text" #cpf><br>
+        <div class="select">
+            <label for="nome">Informe seu Genêro:</label>
+            <select class="form-select" aria-label="Default select example" style="color: rgb(0, 0, 0);" id="Genêro" #genero>
+                <option selected>Genêro</option>
+                <option >Feminino</option>
+                <option >Masculino</option>
+                <option >Outro</option>
+            </select>
+        </div>
+        <label for="aniversário">Informe sua data de nascimento</label><br>
+        <input type="date" name="aniversário" id="aniversário" #aniversario><br>
+        <label for="Contato">Contato</label><br>
+        <input id="Contato" name="Contato" type="text" #Contato><br>
+        <label for="Renda">Renda</label><br>
+        <input id="Renda" name="Renda" type="text" #Renda><br>
+        </div>
+        <input type="button" value="cadastrar" (click)="Cadastrar(nome.value,cpf.value,genero.value,aniversario.value,Contato.value, Renda.value)">
+    </form>
+</div>

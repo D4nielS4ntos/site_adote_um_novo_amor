@@ -1,0 +1,51 @@
+<!-- Banner --> 
+
+<section class="banner">
+<div class="carousel">
+    <div class="carousel-inner" [style.transform]="'translateX(' + (-currentIndex * 100) + '%)'">
+    <div class="carousel-item" *ngFor="let image of images">
+        <img [src]="image" alt="Carousel Image">
+    </div>
+    </div>
+    <button class="carousel-control prev" (click)="prevSlide()">&#8249;</button>
+    <button class="carousel-control next" (click)="nextSlide()">&#8250;</button>
+</div>
+
+<h3>Bem-vindo ao Adote um Novo Amor, uma plataforma criada para revolucionar o processo de adoção de animais. 
+<br>Nosso objetivo é simplificar e otimizar essa jornada, promovendo uma experiência segura, 
+eficiente e transparente para todos os envolvidos.reduzir a superpopulação de animais abandonados, 
+promovendo lares amorosos e seguros. 
+No Adote um Novo Amor, acreditamos em novos começos e na força do amor para transformar vidas. 
+Junte-se a nós nessa missão e faça parte dessa mudança.</h3>
+</section>
+
+
+<!-- Serviços Usuários -->
+<section class="services">
+<h2>Serviços do Usuários</h2>
+
+<div class="service-list">
+    <button class="router-link" routerLink="cadastro_adotante">
+        <div class="service-item">
+            <img src="https://i.pinimg.com/736x/40/b4/c5/40b4c5fc2ff3a1e0cf1cab77b58dff59.jpg" alt="Criação de Sites"> 
+            <h3>Cadastro do adotante</h3>
+            <p>Nessa área o responsável será cadastrado para iniciar o processo de adoção.</p>
+        </div>
+    </button>
+    <button class="router-link" routerLink="registrar_adocao">
+        <div class="service-item">
+        <img src="https://i.pinimg.com/736x/62/1b/7c/621b7c67fa45644afd5fd9c4b618412e.jpg" alt="Sites Responsivos">
+        <h3>Solicitar adoção</h3>
+        <p> Nessa área você poderá finalizar o processo de obter um novo amor.</p>
+        </div>
+    </button>
+    <button class="router-link" routerLink="minhas_requisicoes">
+        <div class="service-item">
+        <img src="https://i.pinimg.com/736x/14/4c/99/144c99ab017c9bf5363447d51e69156d.jpg" alt="Logotipo">
+        <h3>Minhas requisições</h3>
+        <p>Busque encontar o seu companheiro para construir uma nova jornada juntos.</p>
+        </div>
+    </button>
+    
+</div>
+</section>

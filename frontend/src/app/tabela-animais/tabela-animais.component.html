@@ -1,0 +1,22 @@
+<table>
+    <tr>
+        <th>Nome</th>
+        <th>Raça</th>
+        <th>Peso</th>
+        <th>Altura</th>
+        <th>Status</th>
+        <th>Descrição</th>
+        <th>Adotante</th>
+        <th>Idade</th>
+    </tr>
+    <tr *ngFor="let animal of animais">
+        <td>{{animal.nome}}</td>
+        <td>{{animal.raca}}</td>
+        <td>{{animal.peso}}</td>
+        <td>{{animal.altura}}</td>
+        <td>{{animal.status}}</td>
+        <td>{{animal.descricao}}</td>
+        <td>{{animal.id_adotante}}</td>
+        <td>{{animal.idade}}</td>
+    </tr>
+</table>

@@ -1,0 +1,58 @@
+<div>
+    <div class="cadastro">
+        <div class="input">
+            <label for="nome">Nome</label>
+            <input type="text" #nomeAnimal>
+            <label for="nome">Raça</label>
+            <input type="text" #racaAnimal>
+            <input id="bt-filtro" type="button" value="Filtrar" (click)="filtrarTabela(nomeAnimal.value, racaAnimal.value)">
+        </div>
+        <table>
+            <tr>
+                <th>Nome</th>
+                <th>Raça</th>
+                <th>Peso</th>
+                <th>Altura</th>
+                <!-- <th>Status</th> -->
+                <th>Descrição</th>
+                <!-- <th>Adotante</th> -->
+                <th>Idade</th>
+            </tr>
+            <tr *ngFor="let animal of animais">
+                <td>{{animal.nome}}</td>
+                <td>{{animal.raca}}</td>
+                <td>{{animal.peso}}</td>
+                <td>{{animal.altura}}</td>
+                <!-- <td>{{animal.status}}</td> -->
+                <td>{{animal.descricao}}</td>
+                <!-- <td>{{animal.id_adotante}}</td> -->
+                <td>{{animal.idade}}</td>
+            </tr>
+        </table>
+    </div>
+    <div class="cadastro">
+    <form>
+        <h2>Página de Adoção</h2>
+        <div class="form">
+            <label for="nome">Nome</label>
+            <div class="select">
+                <select class="form-select" #adotante>
+                    <option value="null">---</option>
+                    <option *ngFor="let adotante of adotantes" value="{{adotante.id_adotante}}">{{adotante.nome}}</option>
+                </select>
+            </div>
+            <label for="cpf">CPF</label><br>
+            <input id="cpf" name="cpf" type="text" #cpf><br>
+            <label for="idanimal">Animal</label>
+            <div class="select">
+                <select class="form-select" #idanimal>
+                    <option value="null">---</option>
+                    <option *ngFor="let animal of animais" value="{{animal.id_animal}}">{{animal.nome}}</option>
+                </select>
+            </div>
+        </div>
+    
+        <input type="button" value="cadastrar" (click)="solicitarAdocao(adotante.value, cpf.value, idanimal.value)">
+    </form>
+    </div>
+</div>

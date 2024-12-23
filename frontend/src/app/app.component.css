@@ -1,0 +1,51 @@
+
+
+/* Cabeçalho */
+header {
+  background:#e0e0e0;
+  padding: 10px 20px;
+}
+.top-bar {
+  text-align: right;
+  background: #ffffffba;
+  padding: 5px 20px;
+}
+.top-bar a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #553317;
+  font-size: 0.9rem;
+}
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.logo span {
+  color: #a92800;
+}
+.social-contact {
+  display: flex;
+  align-items: center;
+}
+.social-contact a {
+  margin-right: 10px;
+  font-size: 1.5rem;
+  color: #333;
+  text-decoration: none;
+}
+
+/* Rodapé */
+footer {
+  text-align: center;
+  padding: 10px;
+  background: #333;
+  color: white;
+  font-size: 0.9rem;
+}
+
+main {
+  min-height: 800px;
+}

@@ -1,0 +1,1 @@
+CREATE DATABASE db_adote_um_novo_amor;

@@ -1,0 +1,102 @@
+
+/* Banner */
+.banner h3{
+text-align: center;
+margin-left: 20px;
+margin-right: 20px;
+margin-top: 30px;
+color: #ddd;
+padding: 20px;
+
+}
+.carousel {
+position: relative;
+width: 100%;
+max-width: 800px;
+margin: auto;
+overflow: hidden;
+border-radius: 10px;
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+margin-top: 30px;
+}
+
+.carousel-inner {
+display: flex;
+transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+min-width: 100%;
+}
+
+.carousel-item img {
+width: 100%;
+display: block;
+border-radius: 5px;
+}
+
+.carousel-control {
+position: absolute;
+top: 50%;
+transform: translateY(-50%);
+background-color: rgba(0, 0, 0, 0.5);
+color: white;
+border: none;
+padding: 10px;
+cursor: pointer;
+font-size: 1.5rem;
+border-radius: 50%;
+z-index: 1000;
+}
+
+.carousel-control.prev {
+left:10px;
+}
+
+.carousel-control.next {
+right: 10px;
+}
+
+
+/* Serviços */
+.services {
+text-align: center;
+padding: 20px;
+background: #f9f9f9;
+}
+.services h2 {
+margin-bottom: 20px;
+color: #45059e;
+}
+.service-list {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+gap: 20px;
+}
+.service-item {
+background: white;
+border: 1px solid #ddd;
+border-radius: 8px;
+width: 250px;
+height: 100%;
+padding: 10px;
+text-align: center;
+}
+.service-item img {
+width: 100%;
+height: 150px;
+object-fit: cover;
+border-radius: 5px;
+}
+.service-item h3 {
+margin: 10px 0;
+color: #333;
+}
+.service-item p {
+font-size: 0.9rem;
+color: #666;
+}
+button {
+cursor: pointer;
+}

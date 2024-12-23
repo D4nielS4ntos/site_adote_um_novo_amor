@@ -1,0 +1,22 @@
+
+    <div class="carousel">
+        <div class="carousel-inner" [style.transform]="'translateX(' + (-currentIndex * 100) + '%)'">
+        <div class="carousel-item" *ngFor="let image of images">
+            <img [src]="image" alt="Carousel Image">
+        </div>
+        </div>
+        <button class="carousel-control prev" (click)="prevSlide()">&#8249;</button>
+        <button class="carousel-control next" (click)="nextSlide()">&#8250;</button>
+    </div>
+<section>
+    <h1>Nossa</h1>
+    <p>
+    A aplicação "Adote um Novo Amor" foi criada com o propósito de transformar o processo de adoção de animais em uma experiência simples, prática e acolhedora. Focada em promover a adoção responsável, a plataforma conecta animais em busca de um lar a futuros adotantes, proporcionando um ambiente seguro e eficiente para a realização desse encontro. Com uma interface intuitiva, a aplicação garante uma navegação amigável, acessível tanto para quem está buscando adotar quanto para aqueles que desejam doar um pet.
+    </p>
+    <p>
+    Ao acessar o site, o usuário é recebido por uma página que apresenta a descrição da empresa e sua missão, destacando o compromisso com o bem-estar animal e a importância da adoção consciente. No centro da página, estão dispostas as principais opções para iniciar a interação: criar perfil do adotante, onde o usuário fornece informações essenciais para personalizar sua busca; solicitar adoção, facilitando a conexão com os animais disponíveis; e minhas requisições, uma área dedicada ao acompanhamento das solicitações feitas, promovendo transparência e organização durante todo o processo.
+    </p>
+    <p>
+    A plataforma também se diferencia pelo detalhamento dos perfis dos animais, que incluem informações sobre personalidade, cuidados específicos e histórico de saúde. Esse cuidado ajuda a garantir que as adoções sejam bem-sucedidas, promovendo a compatibilidade entre adotante e pet. Com uma proposta inovadora e um sistema funcional, o "Adote um Novo Amor" não apenas simplifica o processo de adoção, mas também incentiva a formação de laços duradouros e significativos entre humanos e animais, fortalecendo a causa da proteção animal.
+    </p>
+</section>

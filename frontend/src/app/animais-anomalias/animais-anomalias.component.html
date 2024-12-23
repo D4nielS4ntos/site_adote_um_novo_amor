@@ -1,0 +1,11 @@
+<form>
+    <label for="anomalia">Anomalias</label><br>
+    <div class="select">
+        <select class="form-select">
+            <option value="null">---</option>
+            <option *ngFor="let anomalia of anomalias" value="{{anomalia}}">{{anomalia.anomalia}}</option>
+        </select>
+    </div><br>
+    
+    <!-- <input type="button" value="cadastrar" (click)="Cadastrar(nome.value,cpf.value,genero.value,aniversario.value,Contato.value, Renda.value)"> -->
+</form>

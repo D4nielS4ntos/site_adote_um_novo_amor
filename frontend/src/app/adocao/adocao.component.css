@@ -1,0 +1,112 @@
+label{
+  text-align: center;
+  color: #ffffff;
+  padding: 8px;
+}
+
+/* Estilo da Tabela Responsiva */
+table {
+  color: rgb(255, 255, 255);
+  border-collapse: collapse;
+  margin: 10px auto;
+  width: 100%;
+  max-width: 1200px; /* Limita a largura máxima */
+}
+
+table th, table td {
+  background-color: #a864058b;
+  padding: 8px;
+  border: 1px solid #000000;
+  text-align: center;
+ 
+  white-space: nowrap; /* Garante que os textos não quebrem */
+}
+
+table th {
+  background-color: #2c2b2b;
+}
+
+/* Formulário */
+.cadastro {
+  margin: auto;
+}
+
+form {
+  background-color: #bb6f04; /* Cor de fundo para o formulário */
+  padding: 20px;
+  margin:auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  width: 80%;
+  max-width: 600px;
+  box-sizing: border-box; /* Para garantir que o padding não sobrecarregue a largura */
+}
+  /* Títulos */
+  form h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #000000;
+  }
+
+  .input{
+    display: inline;
+    width: 30%;
+    padding: 12px;
+    margin: 10px 0;
+    font-size: 1.2rem;
+  }
+
+  .cadastro {
+    margin: 20px;
+  }
+
+  /* .input {
+    /* position: absolute; */
+    /* position: absolute;
+    top: 50%;
+    transform: translate(-50%, 0%);
+  } */
+
+  /* Estilo dos campos de entrada */
+  input[type="text"] {
+    padding: 6px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    box-sizing: border-box;
+  }
+
+  #cpf,
+  select,
+  textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    box-sizing: border-box;
+  }
+  
+  /* Estilo para o botão cadastrar */
+  input[type="button"] {
+    margin: 20px auto; /* Centraliza horizontalmente e cria espaçamento acima/abaixo */
+    padding: 10px 20px; /* Aumenta o tamanho do botão */
+    background-color: #007BFF; /* Cor azul padrão */
+    color: white; /* Cor do texto */
+    border: none; /* Remove a borda padrão */
+    border-radius: 8px; /* Bordas arredondadas */
+  }
+  
+  /* Ajustes para o texto do formulário */
+  form label {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    color: #000000;
+  }
+  
+  #bt-filtro {
+    margin: 5px;
+  }

@@ -1,0 +1,40 @@
+<h2>Analise de Adoções</h2>
+<div>
+    <table>
+        <thead>
+            <tr>
+                <th>IdAdotante</th>
+                <th>Nome Adotante</th>
+                <th>Gênero</th>
+                <th>Data Nascimento</th>
+                <th>Contato</th>
+                <th>Renda</th>
+                <th>IdAnimal</th>
+                <th>Nome Animal</th>
+                <th>Raça</th>
+                <th>Descrição</th>
+                <th>Idade</th>
+                <th>status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let pedido of pedidosService">
+                <td>{{pedido.adotante['id_adotante']}}</td>
+                <td>{{pedido.adotante['nome']}}</td>
+                <td>{{pedido.adotante['genero']}}</td>
+                <td>{{pedido.adotante['data_nascimento']}}</td>
+                <td>{{pedido.adotante['contato']}}</td>
+                <td>{{pedido.adotante['renda']}}</td>
+                <td>{{pedido.animal['id_animal']}}</td>
+                <td>{{pedido.animal['nome']}}</td>
+                <td>{{pedido.animal['raca']}}</td>
+                <td>{{pedido.animal['descricao']}}</td>
+                <td>{{pedido.animal['idade']}}</td>
+                <td>{{pedido.status}}</td>
+                <button class="btnegar" type="button" (click)="negarAdocao(pedido)">Negar</button>
+                <button class="btaprovar" type="button" (click)="aprovarAdocao(pedido)">Aprovar</button>
+            </tr>
+        </tbody>
+        <tfoot><tr class="teste"><td colspan="12">Fim da tabela</td></tr></tfoot>
+    </table>
+</div>

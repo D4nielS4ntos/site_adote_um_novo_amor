@@ -1,0 +1,49 @@
+<div class="from">
+    <form>
+    <h2>Cadastro do Animal</h2>
+    <div class="form">
+        <label for="nome">Nome </label><br>
+          <input id="nome" name="nome" type="text" #nome><br>
+        <label for="raca">Raça </label><br>
+          <input id="raca" name="raca" type="text" #raca><br>
+        <label for="peso">Peso:</label><br>
+        <input id="peso" type="number" placeholder="Ex: 10 kg" #peso/><br>
+        <label for="altura">Altura:</label><br>
+        <input id="altura" type="number" placeholder="Ex: 40 cm" #altura /><br>
+        <label for="altura">Status:</label><br>
+        <div class="select">
+            <select class="form-select" id="idadotante" #status>
+                <!-- <option selected>ID_Adotante</option> -->
+                <option >Disponível</option>
+                <option >Adotado</option>
+            </select>
+        </div>
+        <label for="descrição">Descrição:</label><br>
+        <input id="descrição" type="text" #descricao /><br>
+        <label for="adotantes">Adotantes:</label>
+        <div class="select">
+            <select class="form-select" id="Genêro" #adotante>
+                <option value="null">---</option>
+                <option *ngFor="let adotante of adotantes" value="{{adotante.id_adotante}}">{{adotante.nome}}</option>
+            </select>
+        </div>
+        <label for="data_nascimento">Data_nascimento:</label><br>
+        <input type="date" name="data_nascimento" id="data_nascimento" #nascimento><br>
+    <h2>Cadastro de Anomalias</h2>
+        <label for="anomalia">Animal</label><br>
+        <select class="form-select" #animal>
+            <option value="null">---</option>        
+            <option *ngFor="let animal of animais" value="{{animal.id_animal}}">{{animal.nome}}</option>
+        </select>
+        <label for="anomalia">Anomalias</label><br>
+        <!-- <div class="select">
+        </div><br> -->
+        <select class="form-select" #anomalia>
+            <option value="null">---</option>
+            <option *ngFor="let anomalia of anomalias" value="{{anomalia.id_anomalia}}">{{anomalia.anomalia}}</option>
+        </select>
+    </div>
+    <input type="button" value="cadastrar" (click)="cadastrarAnimal(nome.value,raca.value,peso.value,altura.value,status.value,descricao.value,+adotante.value,nascimento.value,animal.value,anomalia.value)">
+</form>
+</div>
+<app-tabela-animais></app-tabela-animais>

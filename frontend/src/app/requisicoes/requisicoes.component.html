@@ -1,0 +1,34 @@
+<h2>Requisições</h2>
+<div>
+    <table>
+        <thead>
+            <tr>
+                <th>Nome Adotante</th>
+                <th>Gênero</th>
+                <th>Data Nascimento</th>
+                <th>Contato</th>
+                <th>Renda</th>
+                <th>Nome Animal</th>
+                <th>Raça</th>
+                <th>Descrição</th>
+                <th>Idade</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let pedido of pedidosService">
+                <td>{{pedido.adotante['nome']}}</td>
+                <td>{{pedido.adotante['genero']}}</td>
+                <td>{{pedido.adotante['data_nascimento']}}</td>
+                <td>{{pedido.adotante['contato']}}</td>
+                <td>{{pedido.adotante['renda']}}</td>
+                <td>{{pedido.animal['nome']}}</td>
+                <td>{{pedido.animal['raca']}}</td>
+                <td>{{pedido.animal['descricao']}}</td>
+                <td>{{pedido.animal['idade']}}</td>
+                <td>{{pedido.status}}</td>
+            </tr>
+        </tbody>
+        <tfoot><tr class="teste"><td colspan="12">Fim da tabela</td></tr></tfoot>
+    </table>
+</div>

@@ -1,0 +1,16 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  height: 100%;
+  background: linear-gradient(#392100, #ea8c00)
+}
